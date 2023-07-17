@@ -1,10 +1,10 @@
 from sqlalchemy import Column, String, Text
 
 from app.core import constants
-from app.models.base import CharityProjectDonationCommon
+from app.models.base import AbstractModel
 
 
-class CharityProject(CharityProjectDonationCommon):
+class CharityProject(AbstractModel):
     """Модель для хранения информации о благотворительных проектах."""
     CLASS_REPR = '{name} {description:.30}'
 
@@ -13,8 +13,6 @@ class CharityProject(CharityProjectDonationCommon):
 
     def __repr__(self):
         """Возвращает строковое представление объекта."""
-        base_repr = super().__repr__()
-        class_repr = self.CLASS_REPR.format(
+        return self.CLASS_REPR.format(
             name=self.name, description=self.description
         )
-        return f'{base_repr} {class_repr}'

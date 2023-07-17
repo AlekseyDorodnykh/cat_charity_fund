@@ -19,7 +19,7 @@ class CharityProjectCreate(BaseModel):
         schema_extra = {
             'example': {
                 'name': 'Дом для котиков',
-                'description': 'Сбор средств на шикарный дом на берегу Финского залива',
+                'description': 'Сбор средств на дом',
                 'full_amount': 100000,
             }
         }
