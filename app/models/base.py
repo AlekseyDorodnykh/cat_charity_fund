@@ -26,6 +26,5 @@ class AbstractModel(Base):
     create_date = Column(DateTime, default=datetime.now)
     close_date = Column(DateTime)
 
-
     def __repr__(self):
         return super().__repr__()
