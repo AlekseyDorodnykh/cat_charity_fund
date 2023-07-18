@@ -1,13 +1,13 @@
 from datetime import datetime
 from typing import List
 
-from app.models.base import AbstractModel
+from app.models.base import InvestmentModel
 
 
 def allocate_donations(
-    target: AbstractModel,
-    sources: List[AbstractModel],
-) -> List[AbstractModel]:
+    target: InvestmentModel,
+    sources: List[InvestmentModel],
+) -> List[InvestmentModel]:
     """Распределяет средства по благотворительным проектам."""
     results = []
     for source in sources:

@@ -6,8 +6,14 @@ from app.core import constants
 from app.core.db import Base
 
 
-class AbstractModel(Base):
+class InvestmentModel(Base):
     """Базовый  абстрактный класс."""
+
+    CLASS_REPR = (
+        '{class_name} Инвестиций {full_amount} собрано '
+        '{invested_amount} Собрана вся сумма: {fully_invested} Создан: '
+        '{create_date} Закрыт: {close_date}'
+    )
 
     __abstract__ = True
     __table_args__ = (
@@ -27,4 +33,11 @@ class AbstractModel(Base):
     close_date = Column(DateTime)
 
     def __repr__(self):
-        return super().__repr__()
+        return self.CLASS_REPR.format(
+            class_name=type(self),
+            full_amount=self.full_amount,
+            invested_amount=self.invested_amount,
+            fully_invested=self.fully_invested,
+            create_date=self.create_date,
+            close_date=self.close_date,
+        )

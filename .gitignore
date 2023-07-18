@@ -132,4 +132,5 @@ dmypy.json
 .idea
 
 fastapi.db
+cat_fund.db
 test.db
