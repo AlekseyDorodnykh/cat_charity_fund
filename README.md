@@ -38,6 +38,20 @@ description=Сервис для поддержки котиков!
 SECRET=GhI67!asyk  (укажите свой)
 FIRST_SUPERUSER_EMAIL=admin@admin.com  (укажите свой)
 FIRST_SUPERUSER_PASSWORD=1234567  (укажите свой)
+
+# Данные из настройки Google Cloud:
+EMAIL = none (укажите свой)
+TYPE = none
+PROJECT_ID = none
+PRIVATE_KEY_ID = none
+PRIVATE_KEY = none
+CLIENT_EMAIL = none
+CLIENT_ID = none
+AUTH_URI = "https://accounts.google.com/o/oauth2/auth"
+TOKEN_URI = "https://oauth2.googleapis.com/token"
+AUTH_PROVIDER_X509_CERT_URL = "https://www.googleapis.com/oauth2/v1/certs"
+CLIENT_X509_CERT_URL = none
+
 ```
 
 Выполнить миграции:
