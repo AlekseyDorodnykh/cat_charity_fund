@@ -7,8 +7,8 @@
 
 -i https://pypi.org/simple
 aiosqlite==0.17.0
-aiogoogle==5.4.0
 aiohttp==3.7.4.post0
+aiogoogle==5.0.0
 alembic==1.7.7
 anyio==3.6.1
 asgiref==3.5.2
